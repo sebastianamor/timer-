@@ -49,5 +49,5 @@ const calculateTime = runningTime => {
     const display_second = ( total_seconds % 60).toString().padStart(2,"0");
     const display_minutes = total_minutes.toString().padStart(2,"0");
 
-    return `${display_minutes}:${display_second}`
+    return `${display_minutes}:${display_second}` 
 }
