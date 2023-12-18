@@ -1,6 +1,6 @@
 const stopwatch = document.getElementById("stopwatch");
 const playPauseButton = document.getElementById("play-pause");
-const secondSphere = document.getElementById("seconds-sphere");
+const secondsSphere = document.getElementById("seconds-sphere");
 
 
 let stopwatchInterval ;
@@ -18,13 +18,13 @@ const playPause = () => {
 }
 
 const pause = () => {
-     secondSphere.style.animationPlayState = "paused";
+     secondsSphere.style.animationPlayState = "paused";
      clearInterval(stopwatchInterval);
 }
 
 const stop = () => {
-    secondSphere.style.transform = "rotate(-90) tralateX(60px)";
-    secondSphere.style.animation = "none";
+    secondsSphere.style.transform = "rotate(-90) tralateX(60px)";
+    secondsSphere.style.animation = "none";
     playPauseButton.classList.remove('running');
     runningTime = 0;
     clearInterval(stopwatchInterval);
@@ -32,9 +32,9 @@ const stop = () => {
 }
 
 const start = () => {
-    secondSphere.style.animation = " rotacion 60s  linear infinite ";
+    secondsSphere.style.animation = "rotacion 60s  linear infinite ";
      let startTime = Date.now() - runningTime;
-     secondSphere.style.animationPlayState = "running";
+     secondsSphere.style.animationPlayState = "running";
      stopwatchInterval = setInterval ( () => {
         runningTime = Date.now() - startTime;
         stopwatch.textContent = calculateTime(runningTime);
